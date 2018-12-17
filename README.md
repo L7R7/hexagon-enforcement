@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/L7R7/hexagon-enforcement.svg?branch=master)](https://travis-ci.org/L7R7/hexagon-enforcement)
+
 # Hexagon Enforcement with ArchUnit
 In this repository we played around with [ArchUnit](https://www.archunit.org).  More specifically we assessed the capabilities to enforce the ideas of the hexagonal architecture.
 A very good and elaborate explanation of these ideas can be found in an excellent article from Herberto Graca [here](https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/).
