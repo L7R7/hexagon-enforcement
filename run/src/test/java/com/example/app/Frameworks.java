@@ -5,8 +5,8 @@ import com.tngtech.archunit.core.domain.JavaAnnotation;
 
 public class Frameworks {
 
-    public static final String SPRING_FRAMEWORK = "org.springframework..";
+  public static final String SPRING_FRAMEWORK = "org.springframework..";
 
-    public static final DescribedPredicate<JavaAnnotation> SPRING_ANNOTATIONS = new SpringAnnotation();
+  public static final DescribedPredicate<JavaAnnotation> SPRING_ANNOTATIONS = new SpringAnnotation();
 
 }

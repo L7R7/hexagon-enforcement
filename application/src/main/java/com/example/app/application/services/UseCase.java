@@ -8,17 +8,17 @@ import org.springframework.stereotype.Component;
 @Component
 public class UseCase {
 
-    private DomainService service;
-    private EntityRepository repo;
+  private DomainService service;
+  private EntityRepository repo;
 
-    public UseCase(DomainService service, EntityRepository repo) {
-        this.service = service;
-        this.repo = repo;
-    }
+  public UseCase(DomainService service, EntityRepository repo) {
+    this.service = service;
+    this.repo = repo;
+  }
 
-    public String myThing() {
-        Entity entity = repo.getRandomEntity();
-        return service.complexOperation(entity);
-    }
+  public String myThing() {
+    Entity entity = repo.getRandomEntity();
+    return service.complexOperation(entity);
+  }
 
 }

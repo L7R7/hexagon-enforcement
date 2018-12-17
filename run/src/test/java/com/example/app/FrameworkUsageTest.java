@@ -12,17 +12,17 @@ import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 
 class FrameworkUsageTest {
 
-    @Test
-    @DisplayName("Domain layer should not depend on spring")
-    void domainSpring() {
-        classes().that().resideInAPackage(DOMAIN_LAYER).should()
-                .notBeAnnotatedWith(SPRING_ANNOTATIONS).check(CLASSES);
+  @Test
+  @DisplayName("Domain layer should not depend on spring")
+  void domainSpring() {
+    classes().that().resideInAPackage(DOMAIN_LAYER).should()
+        .notBeAnnotatedWith(SPRING_ANNOTATIONS).check(CLASSES);
 
-        noClasses().that().resideInAPackage(DOMAIN_LAYER).
-                should().dependOnClassesThat().resideInAPackage(SPRING_FRAMEWORK).check(CLASSES);
+    noClasses().that().resideInAPackage(DOMAIN_LAYER).
+        should().dependOnClassesThat().resideInAPackage(SPRING_FRAMEWORK).check(CLASSES);
 
-        noClasses().that().resideInAPackage(DOMAIN_LAYER).
-                should().accessClassesThat().resideInAPackage(SPRING_FRAMEWORK).check(CLASSES);
-    }
+    noClasses().that().resideInAPackage(DOMAIN_LAYER).
+        should().accessClassesThat().resideInAPackage(SPRING_FRAMEWORK).check(CLASSES);
+  }
 
 }

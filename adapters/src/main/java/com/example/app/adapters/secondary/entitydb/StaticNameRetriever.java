@@ -6,9 +6,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class StaticNameRetriever implements NameRetriever {
 
-    @Override
-    public String retrieveName(String id) {
-        return "Entity";
-    }
+  @Override
+  public String retrieveName(String id) {
+    return "Entity";
+  }
 
 }

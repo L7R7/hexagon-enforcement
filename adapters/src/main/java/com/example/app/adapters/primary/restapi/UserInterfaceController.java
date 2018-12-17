@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserInterfaceController {
 
-    private UseCase usecase;
+  private UseCase usecase;
 
-    public UserInterfaceController(UseCase usecase) {
-        this.usecase = usecase;
-    }
+  public UserInterfaceController(UseCase usecase) {
+    this.usecase = usecase;
+  }
 
-    @GetMapping("/")
-    public String allRequests() {
-        return usecase.myThing();
-    }
+  @GetMapping("/")
+  public String allRequests() {
+    return usecase.myThing();
+  }
 }
