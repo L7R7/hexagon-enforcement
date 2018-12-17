@@ -3,8 +3,8 @@ package com.example.app;
 import com.tngtech.archunit.library.Architectures;
 import org.junit.jupiter.api.Test;
 
-import static com.tngtech.archunit.library.Architectures.layeredArchitecture;
 import static com.example.app.ArchitectureDescription.*;
+import static com.tngtech.archunit.library.Architectures.layeredArchitecture;
 
 
 public class HexagonTestWithLayersTest {
