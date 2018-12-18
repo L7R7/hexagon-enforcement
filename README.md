@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/L7R7/hexagon-enforcement.svg?branch=master)](https://travis-ci.org/L7R7/hexagon-enforcement)
 
-# Hexagon Enforcement with ArchUnit
+# Hexagon Enforcement with ArchUnit - Maven Multi Module Version
 In this repository we played around with [ArchUnit](https://www.archunit.org).  More specifically we assessed the capabilities to enforce the ideas of the hexagonal architecture.
 A very good and elaborate explanation of these ideas can be found in an excellent article from Herberto Graca [here](https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/).
 
@@ -12,19 +12,14 @@ Obviously you can go arbitrarily crazy on modules and layers.  In our scenario w
 Primary Adapters --> Application --> Domain <-- Secondary Adapters               
 ```
 
-## Git Tags
+## Module Structure
 
-We've prepared git tags to exercise the rule enforcement tests without any hassle.
+The project has the following modules
 
-```
-git checkout <tagName>
-```
-
-We provide the following tags:
-* **clean** A small hexagon application which adheres to the architectural rules.
-* **broken** The same application with a few violations added
-
-> Please note, that we will likely not support the git tags for long as the repository evolves
+* *adapters:* Primary and Secondary Adapters reside here. The module has dependencies to the *application* and to the *domain* module as well as to *spring-boot-starter-web*.
+* *application:* This module contains the application services. It has a dependency to the *domain* module and to *spring-context* to be able to make use of Spring annotations.
+* *domain:* This module does not have any dependencies, neither to other modules nor to any framework.
+* *run:* The main Application class can be found here. The ArchUnit tests live in this module as well for now.
 
 ## Run the Tests
 
